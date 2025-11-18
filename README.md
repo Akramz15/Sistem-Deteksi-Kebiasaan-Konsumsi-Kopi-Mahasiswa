@@ -214,7 +214,7 @@ Target minggu depan:
 
 ## 📊 Flowchart Program
 
-![Flowchart Sistem Analisis Konsumsi Kopi](Flowchart/flowchart-konsumsi-kopi.png)
+![Flowchart Sistem Analisis Konsumsi Kopi](Flowchart/FlowDeteksiKopiMahasiswa.png)
 
 *Flowchart menunjukkan alur kerja sistem dari input hingga output hasil analisis dengan sorting.*
 
