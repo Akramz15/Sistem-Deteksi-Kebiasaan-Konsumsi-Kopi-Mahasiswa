@@ -2,41 +2,39 @@
 
 Program analisis pola konsumsi kopi berbasis data 7 hari menggunakan C++
 
-## 📊 Status Progres: 70%
+## 📊 Status Progres: 100% ✅
 
 **Progres Saat Ini:**
-- ✅ 5 Fungsi Modular Selesai
+- ✅ 7 Fungsi Modular Selesai
 - ✅ Bubble Sort Descending Selesai
-- ⏳ 3 Fitur Dalam Pengembangan (Status, Rekomendasi, Mengulang)
+- ✅ Logika Status & Rekomendasi Selesai
+- ✅ Fitur Mengulang Program Selesai
 
 ## 📌 Fitur yang Sudah Selesai
 
 ✅ **Array 1 Dimensi** - Penyimpanan data konsumsi 7 hari  
 ✅ **Input & Validasi** - Input nama dan konsumsi dengan validasi negatif  
-✅ **Fungsi Modular** - 5 fungsi terpisah untuk kemudahan maintenance  
+✅ **Fungsi Modular** - 7 fungsi terpisah untuk kemudahan maintenance  
 ✅ **Perhitungan Matematis** - Total dan rata-rata konsumsi  
 ✅ **Bubble Sort** - Pengurutan data dari tertinggi ke terendah  
+✅ **Logika Status** - Penentuan Normal/Berlebihan berdasarkan threshold  
+✅ **Rekomendasi Kesehatan** - Saran bertingkat 3 kategori (Sangat Berlebihan, Berlebihan, Normal)  
+✅ **Fitur Mengulang** - Do-while loop untuk analisis berulang  
 ✅ **Tampilan Terstruktur** - Output hasil analisis yang rapi  
 ✅ **Edge Case Handling** - Validasi input negatif dengan perulangan  
-
-## ⏳ Fitur Dalam Pengembangan
-
-🔧 **Logika Status** - Penentuan Normal/Berlebihan (target: minggu depan)  
-🔧 **Rekomendasi Kesehatan** - Saran bertingkat berdasarkan kategori konsumsi (target: minggu depan)  
-🔧 **Fitur Mengulang** - Do-while loop untuk analisis berulang (target: minggu depan)  
 
 ## 🎯 Ketentuan PBL
 
 Program ini dibuat sesuai ketentuan pembelajaran dengan kriteria:
 - ✅ Alur Input → Proses → Output
-- ✅ Percabangan (if-else untuk validasi)
-- ✅ Perulangan (while, for, nested loop)
-- ✅ Minimal 2 fungsi/prosedur (sudah ada 5 fungsi)
+- ✅ Percabangan (if-else untuk validasi & nested if untuk rekomendasi)
+- ✅ Perulangan (while, for, nested loop, do-while)
+- ✅ Minimal 2 fungsi/prosedur (sudah ada 7 fungsi)
 - ✅ Array 1D dengan operasi lengkap (input, baca, copy, swap, tampil)
 - ✅ Algoritma Bubble Sort dengan implementasi lengkap
-- ⏳ Logika status konsumsi (dalam pengembangan)
-- ⏳ Rekomendasi kesehatan (dalam pengembangan)
-- ⏳ Fitur mengulang program (dalam pengembangan)
+- ✅ Logika status konsumsi (Normal/Berlebihan)
+- ✅ Rekomendasi kesehatan bertingkat (3 kategori)
+- ✅ Fitur mengulang program (do-while loop)
 
 ## 📦 Struktur Data
 
@@ -46,19 +44,21 @@ int konsumsi[7];               // Data konsumsi 7 hari
 int konsumsiAsli[7];           // Backup data sebelum sorting
 int total;                     // Total konsumsi
 float rataRata;                // Rata-rata per hari
+string status;                 // Status konsumsi (Normal/Berlebihan)
+char ulang;                    // Input untuk mengulang program (Y/T)
 ```
 
 ## 🔧 Fungsi-Fungsi Utama
 
 | No | Fungsi | Status | Deskripsi |
-|----|--------|--------|-----------|
+|----|--------|--------|-----------||
 | 1 | `inputData()` | ✅ Selesai | Input nama & konsumsi 7 hari dengan validasi |
 | 2 | `hitungTotal()` | ✅ Selesai | Menghitung total konsumsi (return int) |
 | 3 | `hitungRataRata()` | ✅ Selesai | Menghitung rata-rata (return float) |
-| 4 | `bubbleSort()` | ✅ Selesai | Bubble Sort descending (tertinggi ke terendah) |
-| 5 | `tampilkanHasil()` | ✅ Selesai | Menampilkan hasil analisis lengkap |
-| 6 | `tentukanStatus()` | ⏳ Dalam Pengembangan | Logika Normal/Berlebihan |
-| 7 | `rekomendasiKesehatan()` | ⏳ Dalam Pengembangan | Saran kesehatan bertingkat |
+| 4 | `tentukanStatus()` | ✅ Selesai | Menentukan status Normal/Berlebihan (return string) |
+| 5 | `tampilkanRekomendasi()` | ✅ Selesai | Rekomendasi kesehatan 3 tingkat (nested if) |
+| 6 | `bubbleSort()` | ✅ Selesai | Bubble Sort descending (tertinggi ke terendah) |
+| 7 | `tampilkanHasil()` | ✅ Selesai | Menampilkan hasil analisis lengkap dengan status |
 
 ## 🚀 Cara Kompilasi & Menjalankan
 
@@ -85,11 +85,12 @@ Tekan Ctrl+Shift+B → pilih "build and run"
 1. Input Nama Mahasiswa           ✅ Berfungsi penuh
 2. Input Konsumsi 7 Hari          ✅ Berfungsi penuh (dengan validasi)
 3. Hitung Total & Rata-rata       ✅ Berfungsi penuh
-4. Bubble Sort (Descending)       ✅ Berfungsi penuh
-5. Tampilkan Hasil Analisis       ✅ Berfungsi penuh
-6. Tentukan Status                ⏳ Dalam pengembangan
-7. Rekomendasi Kesehatan          ⏳ Dalam pengembangan
-8. Mengulang Program              ⏳ Dalam pengembangan
+4. Tentukan Status Konsumsi       ✅ Berfungsi penuh
+5. Bubble Sort (Descending)       ✅ Berfungsi penuh
+6. Tampilkan Hasil Analisis       ✅ Berfungsi penuh
+7. Rekomendasi Kesehatan 3 Tingkat ✅ Berfungsi penuh
+8. Mengulang Program (Do-While)   ✅ Berfungsi penuh
+9. Pesan Penutup                  ✅ Berfungsi penuh
 ```
 
 ## 💡 Contoh Penggunaan
@@ -117,6 +118,7 @@ Hari ke-7: 3
 Nama Mahasiswa    : Budi Santoso
 Total Konsumsi    : 20 cangkir
 Rata-rata/Hari    : 2.86 cangkir
+Status Konsumsi   : Normal
 ========================================
 
 Konsumsi per hari (terurut tertinggi ke terendah):
@@ -129,11 +131,27 @@ Konsumsi per hari (terurut tertinggi ke terendah):
 7. 1 cangkir
 
 ========================================
-     FITUR DALAM PENGEMBANGAN
+       REKOMENDASI KESEHATAN
 ========================================
-[ ] Analisis status konsumsi
-[ ] Rekomendasi kesehatan
-[ ] Fitur mengulang program
+STATUS: NORMAL
+
+INFORMASI:
+- Konsumsi kopi Anda masih dalam batas wajar
+- Tetap jaga pola konsumsi yang sehat
+- Batas aman: maksimal 3 cangkir per hari
+
+TIPS SEHAT:
+- Hindari kopi saat perut kosong
+- Imbangi dengan air putih yang cukup
+- Jangan minum kopi menjelang tidur
+========================================
+
+Apakah ingin menganalisis data lain? (Y/T): T
+
+========================================
+   Terima kasih telah menggunakan
+   Sistem Analisis Konsumsi Kopi!
+   Jaga kesehatan Anda!
 ========================================
 
 Tekan Enter untuk keluar...
@@ -159,14 +177,54 @@ Hari ke-7: 1
 ✓ Input berhasil! Validasi berfungsi dengan baik.
 ```
 
-### **3. Status & Rekomendasi - Dalam Pengembangan**
+### **3. Konsumsi Berlebihan**
 ```
-INFORMASI: Fitur analisis status dan rekomendasi kesehatan 
-           sedang dalam tahap pengembangan.
+Masukkan nama mahasiswa: Andi Wijaya
 
-Target minggu depan:
-- Penentuan status Normal/Berlebihan
-- Rekomendasi kesehatan 3 tingkat
+Masukkan konsumsi kopi (cangkir) per hari:
+Hari ke-1: 4
+Hari ke-2: 5
+Hari ke-3: 3
+Hari ke-4: 6
+Hari ke-5: 4
+Hari ke-6: 5
+Hari ke-7: 4
+
+========================================
+          HASIL ANALISIS
+========================================
+Nama Mahasiswa    : Andi Wijaya
+Total Konsumsi    : 31 cangkir
+Rata-rata/Hari    : 4.43 cangkir
+Status Konsumsi   : Berlebihan
+========================================
+
+Konsumsi per hari (terurut tertinggi ke terendah):
+1. 6 cangkir
+2. 5 cangkir
+3. 5 cangkir
+4. 4 cangkir
+5. 4 cangkir
+6. 4 cangkir
+7. 3 cangkir
+
+========================================
+       REKOMENDASI KESEHATAN
+========================================
+STATUS: BERLEBIHAN
+
+PERHATIAN:
+- Konsumsi kopi Anda melebihi batas aman
+- Mulai kurangi konsumsi secara perlahan
+- Risiko: gangguan tidur, ketergantungan kafein
+
+SARAN:
+- Batasi maksimal 3 cangkir per hari
+- Perbanyak minum air putih
+- Kurangi kopi di malam hari
+========================================
+
+Apakah ingin menganalisis data lain? (Y/T): Y
 ```
 
 ## ⚠️ Edge Cases yang Ditangani
@@ -182,7 +240,7 @@ Target minggu depan:
 
 ### **Bubble Sort** ✅
 - **Kompleksitas:** O(n²)
-- **Digunakan di:** Fungsi `bubbleSort()` (baris 39-50)
+- **Digunakan di:** Fungsi `bubbleSort()` (baris 95-105)
 - **Cara Kerja:** Nested loop membandingkan elemen berdekatan dan swap jika salah urutan
 - **Fungsi:** Mengurutkan data konsumsi dari tertinggi ke terendah (descending)
 
@@ -192,25 +250,25 @@ Target minggu depan:
 - **Cara Kerja:** Loop akan terus meminta input sampai data valid (>= 0)
 - **Fungsi:** Mencegah input negatif masuk ke array
 
-## 🔧 Algoritma Dalam Pengembangan
-
-### **Logika Status (If-Else)** ⏳
-- **Status:** Akan diimplementasikan minggu depan
-- **Target:** Menentukan Normal/Berlebihan berdasarkan threshold
-- **Threshold:** rata-rata > 3 cangkir = Berlebihan
+### **Logika Status (If-Else)** ✅
 - **Kompleksitas:** O(1)
+- **Digunakan di:** Fungsi `tentukanStatus()` (baris 38-44)
+- **Cara Kerja:** Percabangan sederhana membandingkan rata-rata dengan threshold 3
+- **Fungsi:** Menentukan status Normal atau Berlebihan
 
-### **Rekomendasi Kesehatan (Nested If)** ⏳
-- **Status:** Akan diimplementasikan minggu depan
-- **Target:** Saran kesehatan bertingkat (3 kategori)
-- **Logika:** Nested if untuk kategori Sangat Berlebihan, Berlebihan, Normal
+### **Rekomendasi Kesehatan (Nested If)** ✅
 - **Kompleksitas:** O(1)
+- **Digunakan di:** Fungsi `tampilkanRekomendasi()` (baris 46-93)
+- **Cara Kerja:** Nested if-else dengan 3 kategori berdasarkan tingkat konsumsi
+- **Fungsi:** Memberikan rekomendasi spesifik (Sangat Berlebihan >5, Berlebihan >3, Normal ≤3)
 
-### **Fitur Mengulang (Do-While)** ⏳
-- **Status:** Akan diimplementasikan minggu depan
-- **Target:** Loop untuk analisis berulang tanpa restart program
-- **Input:** Y/T untuk lanjut atau berhenti
+### **Do-While Loop** ✅
 - **Kompleksitas:** O(1) per iterasi
+- **Digunakan di:** Fungsi `main()` (baris 133-167)
+- **Cara Kerja:** Program dijalankan minimal 1x, kemudian user pilih mengulang atau tidak
+- **Fungsi:** Mengulang analisis tanpa restart program
+
+
 
 ## 📊 Flowchart Program
 
@@ -223,26 +281,31 @@ Target minggu depan:
 ```
 PBL-Alprog/
 ├── Flowchart/
-│   └── flowchart-konsumsi-kopi.png    # Diagram alur program (jika ada)
-├── sistem_konsumsi_kopi.cpp           # File program utama (70% selesai)
+│   └── FlowDeteksiKopiMahasiswa.png   # Diagram alur program
+├── sistem_konsumsi_kopi.cpp           # File program utama (100% selesai)
 ├── sistem_konsumsi_kopi.exe           # File executable hasil compile
 └── README.md                          # File ini (overview project)
 ```
 
-## 🎯 Rencana Penyelesaian
+## ✅ Fitur Tambahan yang Diimplementasikan
 
-**Minggu Depan (Target 90-100%):**
-1. ✅ Implementasi logika status (Normal/Berlebihan)
-2. ✅ Implementasi rekomendasi kesehatan bertingkat
-3. ✅ Implementasi fitur mengulang program
-4. ✅ Testing menyeluruh untuk semua fitur
-5. ✅ Finalisasi dokumentasi dan video presentasi
+**Update Terbaru (100% Selesai):**
+1. ✅ Fungsi `tentukanStatus()` - Logika penentuan Normal/Berlebihan
+2. ✅ Fungsi `tampilkanRekomendasi()` - Sistem rekomendasi 3 tingkat:
+   - Sangat Berlebihan (rata-rata > 5 cangkir)
+   - Berlebihan (rata-rata > 3 cangkir)
+   - Normal (rata-rata ≤ 3 cangkir)
+3. ✅ Do-While Loop - Fitur mengulang program dengan input Y/T
+4. ✅ Status ditambahkan ke tampilan hasil
+5. ✅ Pesan penutup yang ramah
+6. ✅ Pause sebelum keluar program
 
-**Kendala yang Dihadapi:**
-- Fokus pada fitur inti terlebih dahulu (input, hitung, sort) ✓
-- Memastikan validasi input sempurna ✓
-- Mempelajari nested loop untuk Bubble Sort ✓
-- Tinggal menambahkan logika bisnis (30%)
+**Peningkatan dari Versi Sebelumnya:**
+- ⬆️ Progres: 70% → 100%
+- ⬆️ Jumlah fungsi: 5 → 7 fungsi
+- ⬆️ Percabangan: If-Else → Nested If-Else (3 tingkat)
+- ⬆️ Perulangan: While, For → While, For, Nested For, Do-While
+- ⬆️ User Experience: Lebih interaktif dengan rekomendasi personal
 
 ## 👨‍💻 Informasi Developer
 
